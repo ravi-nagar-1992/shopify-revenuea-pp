@@ -3,7 +3,7 @@
 client_id = "c5725173fc22938bfc2251a0e56905de"
 name = "upsell-revenue"
 handle = "upsell-revenue"
-application_url = "https://traveler-controllers-feb-jurisdiction.trycloudflare.com"
+application_url = "https://itself-rio-neural-frank.trycloudflare.com"
 embedded = true
 
 [build]
@@ -27,9 +27,9 @@ scopes = "write_products, read_orders"
 
 [auth]
 redirect_urls = [
-  "https://traveler-controllers-feb-jurisdiction.trycloudflare.com/auth/callback",
-  "https://traveler-controllers-feb-jurisdiction.trycloudflare.com/auth/shopify/callback",
-  "https://traveler-controllers-feb-jurisdiction.trycloudflare.com/api/auth/callback"
+  "https://itself-rio-neural-frank.trycloudflare.com/auth/callback",
+  "https://itself-rio-neural-frank.trycloudflare.com/auth/shopify/callback",
+  "https://itself-rio-neural-frank.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
