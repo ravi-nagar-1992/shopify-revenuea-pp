@@ -1,0 +1,36 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "c5725173fc22938bfc2251a0e56905de"
+name = "upsell-revenue"
+handle = "upsell-revenue"
+application_url = "https://traveler-controllers-feb-jurisdiction.trycloudflare.com"
+embedded = true
+
+[build]
+include_config_on_deploy = true
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2025-04"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products, read_orders"
+
+[auth]
+redirect_urls = [
+  "https://traveler-controllers-feb-jurisdiction.trycloudflare.com/auth/callback",
+  "https://traveler-controllers-feb-jurisdiction.trycloudflare.com/auth/shopify/callback",
+  "https://traveler-controllers-feb-jurisdiction.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
