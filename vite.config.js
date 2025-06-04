@@ -17,9 +17,8 @@ if (
   delete process.env.HOST;
 }
 
-const originalHost = new URL(process.env.SHOPIFY_APP_URL || "http://localhost").hostname;
-const bindHost = originalHost === "localhost" ? "0.0.0.0" : originalHost;
-
+const host = new URL(process.env.SHOPIFY_APP_URL || "http://localhost")
+  .hostname;
 let hmrConfig;
 
 if (host === "localhost") {
@@ -40,8 +39,7 @@ if (host === "localhost") {
 
 export default defineConfig({
   server: {
-    host: bindHost, // Add this line
-    allowedHosts: [originalHost],
+    allowedHosts: [host],
     cors: {
       preflightContinue: true,
     },
